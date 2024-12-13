@@ -8,13 +8,13 @@ class NewsDetailsView(DetailView): #динамическая страница д
     template_name = 'news/details_view.html'
     context_object_name = 'article'
 
-class NewsUptadeView(UpdateView):
+class NewsUptadeView(UpdateView): #динамическая страница для обновления новостей
     model = Articles
     template_name = 'news/create.html'
 
     form_class = ArticlesForm
 
-class NewsDeleteView(DeleteView):
+class NewsDeleteView(DeleteView): #динамическая страница для удаления новостей
     model = Articles
     template_name = 'news/delete_news.html'
     success_url = '/news/'
